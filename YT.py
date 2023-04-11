@@ -33,10 +33,11 @@ class YTData:
             response = self.getResponse(param)
             cursor = response.get('nextPageToken')
             videos.extend(response.get('items'))
-            print('Got ', len(videos), ' videos.')
-            print('**************Printing videos received**************')
-            for video in videos:
-                print(video)
-                print('**********')
-            input('Get more videos. Press enter')
+        print('Got ', len(videos), ' videos for the region: ', region)
+        return videos
+            # print('**************Printing videos received**************')
+            # for video in videos:
+            #     print(video)
+            #     print('**********')
+            
             
